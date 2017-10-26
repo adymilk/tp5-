@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微信精选文章</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <style>
+        .article p, a{
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #0f0f0f;
+        }
+    </style>
+</head>
+<body>
+<div class="collection article" style="overflow: hidden">
+    {volist name="data" id="vo"}
+    <a style="overflow: hidden" href="{$vo->url}" class="collection-item"><p><img src="{$vo->picUrl}" style="float:left; width: 100px; height: 70px; margin-right: 1rem" alt="{$vo->description}"><span class="badge">{$vo->ctime}</span>{$vo->title}</p></a>
+    {/volist}
+</div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <p class="grey-text text-lighten-4">资源来源于网络</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Copyright <a href="https://www.coolapk.com/apk/157097" target="_blank">昕浏览器</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内涵段子</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+<body>
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs">
+            {volist name="data" id="vo"}
+            <li class="tab col s3"><a class="active" href="#tab_{$key}">{$vo->name}</a></li>
+            {/volist}
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {volist name="video" id="vo"}
+        <div id="tab_{$key}" class="item">
+            <div class="title">{$vo->group->text}<br><img src="" alt=""></div>
+        </div>
+        {/volist}
+
+    </div>
+</div>
+
+{load href="__JS__/jquery.min.js"}
+{load href="__JS__/neihan_index.js"}
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+</html>
